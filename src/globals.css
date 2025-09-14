@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: 'Play';
+	src: local('Play-Bold'),
+		url('./assets/fonts/Play-Bold.woff2') format('woff2'),
+		url('./assets/fonts/Play-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Play';
+	src: local('Play-Regular'),
+		url('./assets/fonts/Play-Regular.woff2') format('woff2'),
+		url('./assets/fonts/Play-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+html {
+	background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%);
+}
+
+body {
+	font-family: 'Play', sans-serif;
+}
