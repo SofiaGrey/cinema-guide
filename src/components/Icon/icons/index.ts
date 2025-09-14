@@ -1,0 +1,22 @@
+
+export { BackIcon } from './BackIcon';
+export { BurgerIcon } from './BurgerIcon';
+export { CheckIcon } from './CheckIcon';
+export { CopyrightIcon } from './CopyrightIcon';
+export { CrossLargeIcon } from './CrossLargeIcon';
+export { CrossSmallIcon } from './CrossSmallIcon';
+export { FavoriteFillIcon } from './FavoriteFillIcon';
+export { FavoriteIcon } from './FavoriteIcon';
+export { GenresIcon } from './GenresIcon';
+export { KeyIcon } from './KeyIcon';
+export { LineIcon } from './LineIcon';
+export { MailIcon } from './MailIcon';
+export { OkIcon } from './OkIcon';
+export { ReloadIcon } from './ReloadIcon';
+export { SearchIcon } from './SearchIcon';
+export { StarIcon } from './StarIcon';
+export { TgIcon } from './TgIcon';
+export { UserFillIcon } from './UserFillIcon';
+export { UserIcon } from './UserIcon';
+export { VKIcon } from './VKIcon';
+export { YoutubeIcon } from './YoutubeIcon';

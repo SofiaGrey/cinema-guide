@@ -3,8 +3,8 @@
 @font-face {
 	font-family: 'Play';
 	src: local('Play-Bold'),
-		url('./assets/fonts/Play-Bold.woff2') format('woff2'),
-		url('./assets/fonts/Play-Bold.woff') format('woff');
+		url('/fonts/Play-Bold.woff2') format('woff2'),
+		url('/fonts/Play-Bold.woff') format('woff');
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
@@ -13,8 +13,8 @@
 @font-face {
 	font-family: 'Play';
 	src: local('Play-Regular'),
-		url('./assets/fonts/Play-Regular.woff2') format('woff2'),
-		url('./assets/fonts/Play-Regular.woff') format('woff');
+		url('/fonts/Play-Regular.woff2') format('woff2'),
+		url('/fonts/Play-Regular.woff') format('woff');
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
