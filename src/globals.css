@@ -20,6 +20,19 @@
 	font-display: swap;
 }
 
+:root {
+	--text-color: #fff;
+	--text-color-dark: #9C9D9E;
+	--bg-color-default: #393B3C;
+	--link-active-color: #DC5DFC;
+}
+
+@theme {
+	--color-light: var(--text-color);
+	--color-dark: var(--text-color-dark);
+	--color-bg-default: var(--bg-color-default);
+}
+
 html {
 	background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%);
 }
