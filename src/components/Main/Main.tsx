@@ -1,14 +1,16 @@
-import type { FC, HTMLProps, PropsWithChildren } from "react"
-import { cn } from "../../utils"
+import type { FC, HTMLProps, PropsWithChildren } from 'react';
+import { cn } from '../../utils';
 
 interface Props extends PropsWithChildren<HTMLProps<HTMLElement>> {
-	className?: string
+	className?: string;
 }
 
-export const Main:FC<Props> = ({children, className, ...props}) => {
+export const Main: FC<Props> = ({ children, className, ...props }) => {
 	return (
-		<main className={cn("main", className)} {...props}>
+		<main
+			className={cn('main', 'min-h-[calc(100dvh-120px*2)]', className)}
+			{...props}>
 			{children}
 		</main>
-	)
-}
+	);
+};
