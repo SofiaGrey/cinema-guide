@@ -5,6 +5,7 @@ import { getRandomMovie } from '../../api/movie';
 import { Button } from '../Button/Button';
 import { Container } from '../Container/Container';
 import { Icon } from '../Icon/Icon';
+import { RandomMovieLoader } from '../Loaders';
 import { Rating } from '../Rating/Rating';
 
 interface Props {
@@ -26,7 +27,11 @@ export const RandomMovie: FC<Props> = ({ randomMovie }) => {
 		case 'error':
 			return <div>Не удалось загрузить фильм</div>;
 		case 'pending':
-			return <div>Загрузка</div>;
+			return (
+				<Container>
+					<RandomMovieLoader />
+				</Container>
+			);
 		case 'success':
 			const runtimeHours = Math.round(movie && movie?.runtime / 60);
 			const runtimeMinutes = movie && movie.runtime % 60;
