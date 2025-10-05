@@ -1,5 +1,8 @@
-export { Container } from "./Container/Container";
+export { Button } from './Button/Button';
+export { Container } from './Container/Container';
 export { Header } from './Header/Header';
 export { Icon } from './Icon/Icon';
 export { Layout } from './Layout/Layout';
-export { Main } from "./Main/Main";
+export { Main } from './Main/Main';
+export { RandomMovie } from './RandomMovie/RandomMovie';
+export { Rating } from './Rating/Rating';

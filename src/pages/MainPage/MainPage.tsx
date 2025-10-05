@@ -1,6 +1,9 @@
+import { RandomMovie } from '../../components';
 
 export const MainPage = () => {
 	return (
-		<div></div>
-	)
-}
+		<>
+			<RandomMovie randomMovie/>
+		</>
+	);
+};
