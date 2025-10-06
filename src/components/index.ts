@@ -1,9 +1,11 @@
 export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { Footer } from './Footer/Footer';
+export { Frame } from './Frame/Frame';
 export { Header } from './Header/Header';
 export { Icon } from './Icon/Icon';
 export { Layout } from './Layout/Layout';
 export { Main } from './Main/Main';
 export { RandomMovie } from './RandomMovie/RandomMovie';
 export { Rating } from './Rating/Rating';
+export { TopMovies } from './TopMovies/TopMovies';

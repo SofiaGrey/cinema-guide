@@ -11,3 +11,8 @@ export const getRandomMovie = async (): Promise<Movie> => {
 	const res = await instance.get(MOVIE_PATHS.RANDOM);
 	return res.data;
 };
+
+export const getTopMovies = async ():Promise<Movie[]> => {
+	const res = await instance.get(MOVIE_PATHS.TOP10);
+	return res.data;
+}
