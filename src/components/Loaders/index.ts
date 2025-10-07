@@ -1,4 +1,4 @@
 export { GenresLoader } from './GenresLoader/GenresLoader';
 export { MovieCardLoader } from './MovieCardLoader';
-export { RandomMovieLoader } from './RandomMovieLoader';
+export { MovieLoader } from './MovieLoader';
 

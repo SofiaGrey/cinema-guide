@@ -7,6 +7,7 @@ export { Header } from './Header/Header';
 export { Icon } from './Icon/Icon';
 export { Layout } from './Layout/Layout';
 export { Main } from './Main/Main';
+export { MovieSection } from './MovieSection/MovieSection';
 export { RandomMovie } from './RandomMovie/RandomMovie';
 export { Rating } from './Rating/Rating';
 export { TopMovies } from './TopMovies/TopMovies';

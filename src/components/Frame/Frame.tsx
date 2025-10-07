@@ -22,7 +22,7 @@ export const Frame: FC<Props> = ({ data, showIndex, showBtn }) => {
 			data-index={i + 1}
 			key={movie.id}>
 			<Link
-				to={'/about-movie/${movie.id}'}
+				to={`/about-movie/${movie.id}`}
 				className={cn('block w-full h-full')}>
 				{movie.posterUrl ? (
 					<img

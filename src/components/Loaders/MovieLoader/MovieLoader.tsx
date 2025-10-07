@@ -1,6 +1,6 @@
 import { Skeleton } from '../Skeleton';
 
-export const RandomMovieLoader = () => {
+export const MovieLoader = () => {
 	return (
 		<div className="grid grid-cols-2 pt-26.5 pb-30.5 w-full h-150">
 			<div className="max-w-150">

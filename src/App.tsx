@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 import { Layout } from './components';
-import { GenrePage, GenresPage, MainPage } from './pages';
+import { AboutMoviePage, GenrePage, GenresPage, MainPage } from './pages';
 
 function App() {
 	return (
@@ -21,8 +21,11 @@ function App() {
 					path="genres/:genreName"
 					element={<GenrePage />}
 				/>
-				{/*<Route path='about-movie/:movieId' element={<AboutMovie/>}/>
-					<Route path='profile' element={<ProfileLayout />}>
+				<Route
+					path="about-movie/:movieId"
+					element={<AboutMoviePage />}
+				/>
+				{/*	<Route path='profile' element={<ProfileLayout />}>
 						<Route path='favorites' element={<Favorites/>}/>
 						<Route path='settings' element={<Settings/>}/>
 					</Route> */}
