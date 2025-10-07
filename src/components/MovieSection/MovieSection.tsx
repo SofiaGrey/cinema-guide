@@ -52,9 +52,9 @@ export const MovieSection: FC<Props> = ({
 
 	return (
 		<section>
-			<Container className="flex">
+			<Container className="flex pt-16">
 				<div className="shrink-0 pt-26.5 pb-30.5 max-w-150">
-					<div className="flex items-center gap-4 mb-4 text-lg/6 text-dark">
+					<div className="flex items-center gap-4 flex-wrap mb-4 text-lg/6 text-dark">
 						<Rating rating={movie.tmdbRating} />
 						<span>{movie.releaseYear}</span>
 						<ul className="flex gap-4">

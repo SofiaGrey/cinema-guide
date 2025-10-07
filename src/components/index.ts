@@ -1,3 +1,4 @@
+export { AboutMovieSection } from './AboutMovieSection/AboutMovieSection';
 export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { Footer } from './Footer/Footer';

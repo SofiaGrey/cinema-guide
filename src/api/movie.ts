@@ -22,6 +22,11 @@ export const getGenres = async (): Promise<string[]> => {
 	return res.data;
 };
 
+export const getMovieById = async (id: number): Promise<Movie> => {
+	const res = await instance.get(MOVIE_PATHS.BY_ID(id));
+	return res.data;
+};
+
 export const getSearchMovie = async ({
 	genre,
 	title,
