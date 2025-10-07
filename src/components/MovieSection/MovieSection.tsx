@@ -8,10 +8,10 @@ import { MovieLoader } from '../Loaders';
 import { Rating } from '../Rating/Rating';
 
 interface Props {
-	movie?: Movie; // если есть — отрисовываем фильм
-	isLoading?: boolean; // если true — показываем загрузку
-	isError?: boolean; // если true — показываем ошибку
-	onRefetch?: () => void; // кнопка "повторить" при ошибке
+	movie?: Movie;
+	isLoading?: boolean; 
+	isError?: boolean; 
+	onRefetch?: () => void;
 	isRandomMovie?: boolean;
 }
 
