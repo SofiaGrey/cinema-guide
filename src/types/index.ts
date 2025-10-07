@@ -49,3 +49,9 @@ export interface Movie {
 	production: string;
 	awardsSummary: string;
 }
+
+export type SearchMovieParams = {
+	genre?: string;
+	title?: string;
+	page?: number;
+};
