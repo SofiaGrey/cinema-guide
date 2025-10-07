@@ -37,10 +37,18 @@
 	--color-border-dark: var(--border-color-dark);
 	--color-btn-primary: var(--bg-btn-primary);
 	--color-btn-hover: var(--bg-btn-hover);
+	--animate-shimmer: shimmer 1.3s infinite;
+}
+
+@keyframes shimmer {
+	100% {
+		left: 100%;
+	}
 }
 
 html {
-	background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%);
+	background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%),
+		linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.381) 131.74%);
 }
 
 body {

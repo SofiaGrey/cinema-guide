@@ -12,7 +12,12 @@ export const getRandomMovie = async (): Promise<Movie> => {
 	return res.data;
 };
 
-export const getTopMovies = async ():Promise<Movie[]> => {
+export const getTopMovies = async (): Promise<Movie[]> => {
 	const res = await instance.get(MOVIE_PATHS.TOP10);
 	return res.data;
-}
+};
+
+export const getGenres = async (): Promise<string[]> => {
+	const res = await instance.get(MOVIE_PATHS.GENRES);
+	return res.data;
+};

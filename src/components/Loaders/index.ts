@@ -1,3 +1,4 @@
-export { MovieCardLoader } from "./MovieCardLoader";
-export { RandomMovieLoader } from "./RandomMovieLoader";
+export { GenresLoader } from './GenresLoader/GenresLoader';
+export { MovieCardLoader } from './MovieCardLoader';
+export { RandomMovieLoader } from './RandomMovieLoader';
 

@@ -2,6 +2,7 @@ export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { Footer } from './Footer/Footer';
 export { Frame } from './Frame/Frame';
+export { GenreCard } from './GenreCard/GenreCard';
 export { Header } from './Header/Header';
 export { Icon } from './Icon/Icon';
 export { Layout } from './Layout/Layout';

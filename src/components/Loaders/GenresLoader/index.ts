@@ -1,0 +1,2 @@
+export { GenresLoader } from "./GenresLoader";
+
