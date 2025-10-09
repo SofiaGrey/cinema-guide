@@ -28,6 +28,7 @@
 	--border-color-dark: #393B3C;
 	--bg-btn-primary: #6A5DC2;
 	--bg-btn-hover: #8879eb;
+	--error: #FF7575;
 }
 
 @theme {
@@ -37,6 +38,7 @@
 	--color-border-dark: var(--border-color-dark);
 	--color-btn-primary: var(--bg-btn-primary);
 	--color-btn-hover: var(--bg-btn-hover);
+	--color-error: var(--error);
 	--animate-shimmer: shimmer 1.3s infinite;
 }
 

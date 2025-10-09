@@ -11,7 +11,7 @@ const variants = {
 	default: 'px-12 py-4',
 	icon: 'px-5.5 py-4 ',
 	full: 'w-full py-4 bg-btn-primary',
-	text: 'w-full bg-inherit border-none',
+	text: 'w-full py-4 bg-inherit text-black border-none hover:text-white',
 };
 
 export const Button: FC<Props> = ({

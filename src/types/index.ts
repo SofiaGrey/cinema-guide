@@ -55,3 +55,29 @@ export type SearchMovieParams = {
 	title?: string;
 	page?: number;
 };
+
+export interface Inputs {
+	email: string;
+	name: string;
+	surname: string;
+	password: string;
+	repeatPassword: string;
+}
+
+export interface InputItem {
+	type: string;
+	iconName: IconType;
+	name: keyof Inputs;
+	required: boolean;
+	placeholder: string;
+	validation?: {
+		minLength?: {
+			value: number;
+			message: string;
+		};
+		pattern?: {
+			value: RegExp;
+			message: string;
+		};
+	};
+}
