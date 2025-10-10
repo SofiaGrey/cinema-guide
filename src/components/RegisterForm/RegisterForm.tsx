@@ -1,4 +1,6 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useForm, type SubmitHandler } from 'react-hook-form';
+import { createUser } from '../../api/user';
 import { REGISTER_INPUTS } from '../../constants/constants';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import {
@@ -14,21 +16,34 @@ import { Modal } from '../Modal/Modal';
 export const RegisterForm = () => {
 	const { isRegisterFormOpen } = useAppSelector((state) => state.register);
 	const dispatch = useAppDispatch();
+	const queryClient = useQueryClient();
 
 	const {
 		register,
 		handleSubmit,
 		watch,
+		reset,
 		formState: { errors },
 	} = useForm<Inputs>({ mode: 'onChange' });
+
+	const { mutate } = useMutation(
+		{
+			mutationKey: ['registration', 'create'],
+			mutationFn: (data: Inputs) => createUser(data),
+			onSuccess() {
+				reset();
+				dispatch(setRegisterFormOpen(false));
+				dispatch(setSuccessModalOpen(true));
+			},
+		},
+		queryClient,
+	);
 
 	const password = watch('password');
 
 	const onSubmit: SubmitHandler<Inputs> = (data) => {
+		mutate(data);
 		console.log('Форма отправлена:', data);
-
-		dispatch(setRegisterFormOpen(false));
-		dispatch(setSuccessModalOpen(true));
 	};
 
 	const handleClick = () => {
