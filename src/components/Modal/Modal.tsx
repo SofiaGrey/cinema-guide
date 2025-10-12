@@ -4,6 +4,7 @@ import { Icon } from '../Icon/Icon';
 
 interface Props {
 	className?: string;
+	wrapperClassName?: string;
 	isOpen: boolean;
 	cb: () => void;
 }
@@ -12,6 +13,7 @@ export const Modal = ({
 	children,
 	isOpen,
 	className,
+	wrapperClassName,
 	cb,
 }: PropsWithChildren<Props>) => {
 	const handleClick = (event: MouseEvent<HTMLDivElement>) => {
@@ -29,11 +31,11 @@ export const Modal = ({
 				},
 				className,
 			)}>
-			<div className="relative flex flex-col items-center gap-10 py-16 px-10 min-w-[335px] max-w-[420px] w-full bg-white rounded-3xl">
-				<img
-					src="./logo.png"
-					alt="Cinema Guide logo"
-				/>
+			<div
+				className={cn(
+					'relative flex flex-col justify-center items-center gap-10 py-16 px-10 min-w-[335px] max-w-[420px] w-full bg-white rounded-3xl',
+					wrapperClassName,
+				)}>
 				{children}
 				<button
 					className="absolute top-0 -right-18 rounded-full bg-white p-3 cursor-pointer"

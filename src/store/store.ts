@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { login, register, success } from './slices';
+import { login, register, success, video } from './slices';
 
 export const store = configureStore({
 	reducer: {
 		register,
 		login,
 		success,
+		video,
 	},
 });
 

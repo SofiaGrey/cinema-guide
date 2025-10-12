@@ -17,3 +17,5 @@ export { RegisterForm } from './RegisterForm/RegisterForm';
 export { RegistrationSuccessModal } from './RegistrationSuccessModal/RegistrationSuccessModal';
 export { ToggleFavoriteBtn } from './ToggleFavoriteBtn/ToggleFavoriteBtn';
 export { TopMovies } from './TopMovies/TopMovies';
+export { VideoModal } from './VideoModal/VideoModal';
+

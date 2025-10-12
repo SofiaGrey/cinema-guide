@@ -1,5 +1,8 @@
 import type { FC } from 'react';
 import { NavLink } from 'react-router';
+import { useAppDispatch } from '../../hooks';
+import { setVideoOpen } from '../../store/slices';
+import { setVideo } from '../../store/slices/videoSlice';
 import type { Movie } from '../../types';
 import { Button } from '../Button/Button';
 import { Container } from '../Container/Container';
@@ -23,6 +26,8 @@ export const MovieSection: FC<Props> = ({
 	isError,
 	onRefetch,
 }) => {
+	const dispatch = useAppDispatch();
+
 	if (isError) {
 		return (
 			<div className="text-center py-10">
@@ -47,6 +52,11 @@ export const MovieSection: FC<Props> = ({
 	}
 
 	if (!movie) return null;
+
+	const handleClick = () => {
+		dispatch(setVideoOpen(true));
+		dispatch(setVideo(movie.trailerYouTubeId));
+	};
 
 	const runtimeHours = Math.round(movie && movie?.runtime / 60);
 	const runtimeMinutes = movie && movie.runtime % 60;
@@ -76,7 +86,8 @@ export const MovieSection: FC<Props> = ({
 					<div className="flex gap-4">
 						<Button
 							variant="default"
-							className="bg-btn-primary">
+							className="bg-btn-primary"
+							onClick={() => handleClick()}>
 							Трейлер
 						</Button>
 						{isRandomMovie && (

@@ -53,6 +53,10 @@ export const LoginForm = () => {
 		<Modal
 			cb={handleClick}
 			isOpen={isLoginFormOpen}>
+			<img
+				src="./logo.png"
+				alt="Cinema Guide logo"
+			/>
 			<form
 				className="w-full flex flex-col gap-5"
 				onSubmit={handleSubmit(onSubmit)}>

@@ -5,6 +5,7 @@ import { LoginForm } from '../LoginForm/LoginForm';
 import { Main } from '../Main/Main';
 import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { RegistrationSuccessModal } from '../RegistrationSuccessModal/RegistrationSuccessModal';
+import { VideoModal } from '../VideoModal/VideoModal';
 
 export const Layout = () => {
 	return (
@@ -15,6 +16,7 @@ export const Layout = () => {
 				<RegisterForm />
 				<LoginForm />
 				<RegistrationSuccessModal />
+				<VideoModal />
 			</Main>
 			<Footer />
 		</>

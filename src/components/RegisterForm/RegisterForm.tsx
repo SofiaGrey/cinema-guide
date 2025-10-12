@@ -59,6 +59,10 @@ export const RegisterForm = () => {
 		<Modal
 			isOpen={isRegisterFormOpen}
 			cb={handleClick}>
+			<img
+				src="./logo.png"
+				alt="Cinema Guide logo"
+			/>
 			<form
 				className="w-full flex flex-col gap-5"
 				onSubmit={handleSubmit(onSubmit)}>
