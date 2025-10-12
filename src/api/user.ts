@@ -29,6 +29,11 @@ export const login = async (
 	return res.data;
 };
 
+export const logout = async ():Promise<SuccessfulResponse> => {
+	const res = await instance.get(AUTH_PATHS.LOGOUT);
+	return res.data;
+}
+
 export const getProfile = async (): Promise<UserData> => {
 	const res = await instance.get(USER_PATHS.PROFILE);
 	return res.data;
