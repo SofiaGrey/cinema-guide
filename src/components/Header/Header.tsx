@@ -61,7 +61,14 @@ export const Header = () => {
 						/>
 					</button>
 				</div>
-				{isSuccess && user && <NavLink to={'/profile'}>{user.name}</NavLink>}
+				{isSuccess && user && (
+					<NavLink
+						to={'/profile/favorites'}
+						className="profile relative text-2xl/8"
+						end={false}>
+						{user.name}
+					</NavLink>
+				)}
 				{!isPending && !isSuccess && (
 					<button
 						className="text-2xl/8 text-light cursor-pointer"

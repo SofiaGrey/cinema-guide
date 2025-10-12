@@ -1,5 +1,7 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { FC } from 'react';
 import { Link } from 'react-router';
+import { removeFromFavorites } from '../../api/user';
 import type { Movie } from '../../types';
 import { cn } from '../../utils';
 import { Icon } from '../Icon/Icon';
@@ -16,6 +18,19 @@ const beforeProp =
 	'before:content-[attr(data-index)] before:absolute before:-top-3 before:-left-3 before:py-2 before:px-6 before:text-2xl/8 before:font-bold before:text-[#6A5DC2] before:bg-white before:rounded-[3.125rem]';
 
 export const Frame: FC<Props> = ({ data, showIndex, showBtn }) => {
+	const queryClient = useQueryClient();
+
+	const removeMutation = useMutation({
+		mutationFn: (id: number) => removeFromFavorites(id.toString()),
+		onSuccess: () => {
+			queryClient.invalidateQueries({ queryKey: ['favorites'] });
+		},
+	});
+
+	const handleClick = (id: number) => {
+		removeMutation.mutate(id);
+	};
+
 	return data.map((movie, i) => (
 		<li
 			className={cn(base, showIndex && beforeProp)}
@@ -37,7 +52,9 @@ export const Frame: FC<Props> = ({ data, showIndex, showBtn }) => {
 				)}
 			</Link>
 			{showBtn && (
-				<button className="absolute -top-5 -right-5 p-2 bg-white rounded-full opacity-0 cursor-pointer group-hover:opacity-100 transition duration-300 ease-in-out">
+				<button
+					onClick={() => handleClick(movie.id)}
+					className="absolute -top-5 -right-5 p-2 bg-white rounded-full opacity-0 cursor-pointer group-hover:opacity-100 transition duration-300 ease-in-out">
 					<Icon
 						name="crossSmall"
 						className="fill-black"

@@ -1,7 +1,15 @@
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import './App.css';
 import { Layout } from './components';
-import { AboutMoviePage, GenrePage, GenresPage, MainPage } from './pages';
+import {
+	AboutMoviePage,
+	GenrePage,
+	GenresPage,
+	MainPage,
+	ProfileFavoritesPage,
+	ProfilePage,
+	ProfileSettingsPage,
+} from './pages';
 
 function App() {
 	return (
@@ -25,10 +33,27 @@ function App() {
 					path="about-movie/:movieId"
 					element={<AboutMoviePage />}
 				/>
-				{/*	<Route path='profile' element={<ProfileLayout />}>
-						<Route path='favorites' element={<Favorites/>}/>
-						<Route path='settings' element={<Settings/>}/>
-					</Route> */}
+				<Route
+					path="profile"
+					element={<ProfilePage />}>
+					<Route
+						index
+						element={
+							<Navigate
+								to="favorites"
+								replace
+							/>
+						}
+					/>
+					<Route
+						path="favorites"
+						element={<ProfileFavoritesPage />}
+					/>
+					<Route
+						path="settings"
+						element={<ProfileSettingsPage />}
+					/>
+				</Route>
 			</Route>
 		</Routes>
 	);

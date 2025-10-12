@@ -1,5 +1,5 @@
 
-nav a.active::before {
+nav a.active::before, .profile.active::before {
 	content: "";
 	position: absolute;
 	bottom: -4px;

@@ -6,11 +6,12 @@ import { Container } from '../Container/Container';
 import { Icon } from '../Icon/Icon';
 import { MovieLoader } from '../Loaders';
 import { Rating } from '../Rating/Rating';
+import { ToggleFavoriteBtn } from '../ToggleFavoriteBtn/ToggleFavoriteBtn';
 
 interface Props {
 	movie?: Movie;
-	isLoading?: boolean; 
-	isError?: boolean; 
+	isLoading?: boolean;
+	isError?: boolean;
 	onRefetch?: () => void;
 	isRandomMovie?: boolean;
 }
@@ -85,11 +86,7 @@ export const MovieSection: FC<Props> = ({
 								О фильме
 							</NavLink>
 						)}
-						<Button variant="icon">
-							<Icon
-								name="favorite"
-								className="fill-white"></Icon>
-						</Button>
+						<ToggleFavoriteBtn id={movie.id.toString()} />
 						{isRandomMovie && (
 							<Button
 								variant="icon"

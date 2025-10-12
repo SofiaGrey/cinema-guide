@@ -14,7 +14,7 @@ export const USER_PATHS = {
 
 export const FAVORITES_PATHS = {
 	BASE: `${API_URL}favorites`,
-	REMOVE: (movieId: number) => `${API_URL}favorites/${movieId}`,
+	REMOVE: (movieId: string) => `${API_URL}favorites/${movieId}`,
 };
 
 export const MOVIE_PATHS = {
