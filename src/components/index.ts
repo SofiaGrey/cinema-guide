@@ -15,7 +15,8 @@ export { RandomMovie } from './RandomMovie/RandomMovie';
 export { Rating } from './Rating/Rating';
 export { RegisterForm } from './RegisterForm/RegisterForm';
 export { RegistrationSuccessModal } from './RegistrationSuccessModal/RegistrationSuccessModal';
+export { Search } from './Search/Search';
+export { SearchMovies } from './SearchMovies/SearchMovies';
 export { ToggleFavoriteBtn } from './ToggleFavoriteBtn/ToggleFavoriteBtn';
 export { TopMovies } from './TopMovies/TopMovies';
 export { VideoModal } from './VideoModal/VideoModal';
-

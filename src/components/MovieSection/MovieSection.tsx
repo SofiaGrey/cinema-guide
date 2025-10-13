@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../hooks';
 import { setVideoOpen } from '../../store/slices';
 import { setVideo } from '../../store/slices/videoSlice';
 import type { Movie } from '../../types';
+import { formatRuntime } from '../../utils';
 import { Button } from '../Button/Button';
 import { Container } from '../Container/Container';
 import { Icon } from '../Icon/Icon';
@@ -58,9 +59,6 @@ export const MovieSection: FC<Props> = ({
 		dispatch(setVideo(movie.trailerYouTubeId));
 	};
 
-	const runtimeHours = Math.round(movie && movie?.runtime / 60);
-	const runtimeMinutes = movie && movie.runtime % 60;
-
 	return (
 		<section>
 			<Container className="flex pt-16">
@@ -73,9 +71,7 @@ export const MovieSection: FC<Props> = ({
 								<li key={genre}>{genre}</li>
 							))}
 						</ul>
-						<span>
-							{runtimeHours} ч {runtimeMinutes} мин
-						</span>
+						<span>{formatRuntime(movie.runtime)}</span>
 					</div>
 					<h1 className="mb-4 text-5xl/14 font-bold">{movie.title}</h1>
 					<p className="mb-15 text-2xl/8 text-dark">
