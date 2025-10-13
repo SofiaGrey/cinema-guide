@@ -75,8 +75,10 @@ export const MovieSection: FC<Props> = ({
 					</div>
 					<h1 className="mb-4 text-5xl/14 font-bold">{movie.title}</h1>
 					<p className="mb-15 text-2xl/8 text-dark">
-						{movie.plot.length > 150
-							? `${movie.plot.slice(0, 200)}...`
+						{isRandomMovie
+							? movie.plot.length > 150
+								? `${movie.plot.slice(0, 200)}...`
+								: movie.plot
 							: movie.plot}
 					</p>
 					<div className="flex gap-4">
