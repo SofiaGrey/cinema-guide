@@ -3,8 +3,11 @@ import type { FC } from 'react';
 import {
 	addToFavorites,
 	getFavorites,
+	getProfile,
 	removeFromFavorites,
 } from '../../api/user';
+import { useAppDispatch } from '../../hooks';
+import { setLoginFormOpen } from '../../store/slices';
 import { cn } from '../../utils';
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
@@ -15,10 +18,16 @@ interface Props {
 
 export const ToggleFavoriteBtn: FC<Props> = ({ id }) => {
 	const queryClient = useQueryClient();
-
+	const dispatch = useAppDispatch();
 	const { data: favorites } = useQuery({
 		queryKey: ['favorites'],
 		queryFn: () => getFavorites(),
+		retry: 0,
+	});
+
+	const { data: user } = useQuery({
+		queryKey: ['user', 'profile'],
+		queryFn: () => getProfile(),
 		retry: 0,
 	});
 
@@ -38,10 +47,10 @@ export const ToggleFavoriteBtn: FC<Props> = ({ id }) => {
 	const isFavorite = favorites?.some((movie) => movie.id === Number(id));
 
 	const handleClick = () => {
-		if (isFavorite) {
-			removeMutation.mutate();
+		if (user) {
+			isFavorite ? removeMutation.mutate() : addMutation.mutate();
 		} else {
-			addMutation.mutate();
+			dispatch(setLoginFormOpen(true));
 		}
 	};
 
