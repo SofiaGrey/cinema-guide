@@ -22,11 +22,13 @@ export const TopMovies = () => {
 		case 'success':
 			return (
 				<section>
-					<Container className="pt-10 pb-30">
-						<h2 className="text-[2.5rem]/11.5 font-bold mb-16">
+					<Container className="pt-8">
+						<h2 className=" text-2xl/8 md:text-[2.5rem]/11.5 font-bold lg:mb-16">
 							Топ 10 фильмов
 						</h2>
-						<ul className="grid grid-cols-5 gap-x-10 gap-y-16">
+					</Container>
+					<Container className="pt-10 pb-8 overflow-y-hidden overflow-x-scroll lg:overflow-visible">
+						<ul className="flex w-full lg:grid lg:grid-cols-4 xl:grid-cols-5 gap-y-6 gap-x-10 md:gap-y-16">
 							<Frame
 								data={data}
 								showIndex

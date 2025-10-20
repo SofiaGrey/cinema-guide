@@ -61,8 +61,8 @@ export const MovieSection: FC<Props> = ({
 
 	return (
 		<section>
-			<Container className="flex pt-16">
-				<div className="shrink-0 pt-26.5 pb-30.5 max-w-150">
+			<Container className="flex flex-col lg:pt-16 lg:flex-row">
+				<div className="shrink-0 py-6 w-full order-1 lg:order-0 lg:pt-26.5 lg:pb-30.5 lg:max-w-150">
 					<div className="flex items-center gap-4 flex-wrap mb-4 text-lg/6 text-dark">
 						<Rating rating={movie.tmdbRating} />
 						<span>{movie.releaseYear}</span>
@@ -73,25 +73,27 @@ export const MovieSection: FC<Props> = ({
 						</ul>
 						<span>{formatRuntime(movie.runtime)}</span>
 					</div>
-					<h1 className="mb-4 text-5xl/14 font-bold">{movie.title}</h1>
-					<p className="mb-15 text-2xl/8 text-dark">
+					<h1 className="text-2xl/8 mb-4 md:text-5xl/14 font-bold">
+						{movie.title}
+					</h1>
+					<p className="text-lg/6 mb-8 md:mb-15 md:text-2xl/8 text-dark">
 						{isRandomMovie
 							? movie.plot.length > 150
 								? `${movie.plot.slice(0, 200)}...`
 								: movie.plot
 							: movie.plot}
 					</p>
-					<div className="flex gap-4">
+					<div className=" grid grid-cols-4 lg:flex gap-4 ">
 						<Button
 							variant="default"
-							className="bg-btn-primary"
+							className="bg-btn-primary col-span-full"
 							onClick={() => handleClick()}>
 							Трейлер
 						</Button>
 						{isRandomMovie && (
 							<NavLink
 								to={`/about-movie/${movie.id}`}
-								className="px-12 py-4 text-lg/6 font-bold rounded-full border border-border-dark bg-bg-default cursor-pointer outline-none hover:bg-btn-hover transition duration-300 ease-in-out">
+								className="flex items-center justify-center col-span-2 px-12 py-4 text-lg/6 font-bold text-nowrap rounded-full border border-border-dark bg-bg-default cursor-pointer outline-none hover:bg-btn-hover transition duration-300 ease-in-out">
 								О фильме
 							</NavLink>
 						)}

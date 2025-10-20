@@ -13,7 +13,7 @@ interface Props {
 }
 
 const base =
-	'relative border border-[#FFFFFF40] rounded-2xl shadow-[0_0_80px_0_#FFFFFF54] group';
+	'relative border border-[#FFFFFF40] rounded-2xl shadow-[0_0_80px_0_#FFFFFF54] group min-w-56 lg:min-w-50';
 const beforeProp =
 	'before:content-[attr(data-index)] before:absolute before:-top-3 before:-left-3 before:py-2 before:px-6 before:text-2xl/8 before:font-bold before:text-[#6A5DC2] before:bg-white before:rounded-[3.125rem]';
 

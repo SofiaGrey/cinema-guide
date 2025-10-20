@@ -8,7 +8,7 @@ export const Footer = () => {
 	return (
 		<footer className="mt-auto py-10.5">
 			<Container>
-				<ul className="flex items-center justify-end gap-6">
+				<ul className="flex items-center justify-start lg:justify-end gap-6">
 					{icons.map((icon) => (
 						<li
 							className="cursor-pointer"

@@ -40,7 +40,7 @@ export const Header = () => {
 			<Container className="flex items-center justify-between gap-x-20">
 				<Link
 					to="/"
-					className="block w-[180px] flex-shrink-0">
+					className="block w-30 flex-shrink-0 md:w-[180px]">
 					<img
 						src="/logo.png"
 						alt="Cinema-guide логотип"
@@ -66,7 +66,7 @@ export const Header = () => {
 							</li>
 						</ul>
 					</nav>
-					<Search ref={searchRef}/>
+					<Search ref={searchRef} />
 				</div>
 				{isSuccess && user && (
 					<NavLink

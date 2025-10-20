@@ -5,7 +5,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'default' | 'icon' | 'full' | 'text';
 }
 const base =
-	'text-lg/6 font-bold rounded-full border border-border-dark bg-bg-default cursor-pointer outline-none hover:bg-btn-hover transition duration-300 ease-in-out';
+	'flex items-center justify-center text-lg/6 font-bold rounded-full border border-border-dark bg-bg-default cursor-pointer outline-none hover:bg-btn-hover transition duration-300 ease-in-out';
 
 const variants = {
 	default: 'px-12 py-4',
@@ -23,7 +23,7 @@ export const Button: FC<Props> = ({
 	return (
 		<button
 			{...props}
-			className={cn(base, variants[variant], className)}>
+			className={cn(base, variants[variant], className, '')}>
 			{children}
 		</button>
 	);
