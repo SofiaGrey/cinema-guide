@@ -50,20 +50,18 @@ export const GenrePage = () => {
 			return (
 				<section>
 					<Container className="flex flex-col pt-16 pb-40">
-						<h1 className="mb-16 text-5xl/14 font-bold">
+						<h1 className="text-2xl/8 mb-10 md:mb-16 md:text-5xl/14 font-bold">
 							<NavLink
 								to={'/genres'}
-								className="flex items-center gap-4">
+								className="flex items-center gap-4 capitalize">
 								<Icon
 									name="back"
-									width={40}
-									height={40}
-									className="fill-white"
+									className="fill-white w-8 h-8 md:w-10 md:h-10"
 								/>
-								{`${genreName?.charAt(0).toUpperCase()}${genreName?.slice(1)}`}
+								{genreName}
 							</NavLink>
 						</h1>
-						<ul className="grid grid-cols-5 gap-x-10 gap-y-16 mb-16">
+						<ul className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-10 gap-y-6 md:gap-y-16 mb-16">
 							<Frame data={movies} />
 						</ul>
 						{hasMore && (
