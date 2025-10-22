@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getProfile, logout } from '../../api/user';
-import { Button, Icon } from '../../components';
+import { Button, Container, Icon } from '../../components';
 
 export const ProfileSettingsPage = () => {
 	const { data } = useQuery({
@@ -21,12 +21,12 @@ export const ProfileSettingsPage = () => {
 	);
 
 	const handleLogout = async () => {
-		mutate()
+		mutate();
 		window.location.href = '/';
-	}
+	};
 
 	return (
-		<>
+		<Container className="mb-38">
 			<ul className="flex flex-col items-start gap-10 mb-16">
 				<li className="flex gap-4">
 					<div className="p-3.5 bg-dark rounded-full text-2xl/8">
@@ -57,10 +57,10 @@ export const ProfileSettingsPage = () => {
 			</ul>
 			<Button
 				variant="default"
-				className="bg-btn-primary"
+				className="bg-btn-primary w-full lg:max-w-66"
 				onClick={() => handleLogout()}>
 				Выйти из аккаунта
 			</Button>
-		</>
+		</Container>
 	);
 };
