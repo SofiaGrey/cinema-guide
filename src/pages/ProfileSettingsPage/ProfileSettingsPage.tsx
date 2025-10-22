@@ -29,19 +29,21 @@ export const ProfileSettingsPage = () => {
 		<Container className="mb-38">
 			<ul className="flex flex-col items-start gap-10 mb-16">
 				<li className="flex gap-4">
-					<div className="p-3.5 bg-dark rounded-full text-2xl/8">
+					<div className="p-2 sm:p-3.5 bg-dark rounded-full w-12 h-12 sm:w-15 sm:h-15 text-2xl/8">
 						{data?.name.charAt(0).toUpperCase()}
 						{data?.surname.charAt(0).toUpperCase()}
 					</div>
 					<div>
-						<span className="text-lg/6">Имя Фамилия</span>
-						<h2 className="text-2xl/8 font-bold">
+						<span className="text-sm/5 sm:text-lg/6 text-[#8D919B] sm:text-white">
+							Имя Фамилия
+						</span>
+						<h2 className="text-lg/6 sm:text-2xl/8 font-bold">
 							{data?.name} {data?.surname}
 						</h2>
 					</div>
 				</li>
 				<li className="flex gap-4">
-					<div className="flex items-center p-3.5 bg-dark rounded-full text-2xl/8">
+					<div className="flex items-center p-2 sm:p-3.5 bg-dark w-12 h-12 sm:w-15 sm:h-15  rounded-full text-2xl/8">
 						<Icon
 							name="mail"
 							className="fill-white"
@@ -50,8 +52,8 @@ export const ProfileSettingsPage = () => {
 						/>
 					</div>
 					<div>
-						<span className="text-lg/6">Электронная почта</span>
-						<h2 className="text-2xl/8 font-bold">{data?.email}</h2>
+						<span className="text-lg/6 text-[#8D919B] sm:text-white">Электронная почта</span>
+						<h2 className="text-lg/6 sm:text-2xl/8 font-bold ">{data?.email}</h2>
 					</div>
 				</li>
 			</ul>
