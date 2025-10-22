@@ -64,7 +64,7 @@ export const RegisterForm = () => {
 				alt="Cinema Guide logo"
 			/>
 			<form
-				className="w-full flex flex-col gap-5"
+				className="w-full flex flex-col gap-3 sm:gap-5"
 				onSubmit={handleSubmit(onSubmit)}>
 				<h2 className="text-2xl/8 font-bold text-black self-center">
 					Регистрация

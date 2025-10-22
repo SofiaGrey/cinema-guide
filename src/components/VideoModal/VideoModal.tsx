@@ -16,10 +16,10 @@ export const VideoModal = () => {
 		<Modal
 			cb={() => handleClick()}
 			isOpen={isVideoOpen}
-			wrapperClassName="max-w-260 p-0">
-			<div className="w-full min-h-135">
+			wrapperClassName="max-w-80 sm:max-w-140 md:max-w-180 lg:max-w-210 xl:max-w-260 p-0 sm:p-0">
+			<div className="w-full min-h-53 sm:min-h-80 md:min-h-110 lg:min-h-135">
 				<iframe
-					className="w-full min-h-135"
+					className="w-full min-h-53 sm:min-h-80 md:min-h-110 lg:min-h-135"
 					src={`https://www.youtube.com/embed/${video}`}
 					allow="autoplay; encrypted-media"
 					referrerPolicy="strict-origin-when-cross-origin"

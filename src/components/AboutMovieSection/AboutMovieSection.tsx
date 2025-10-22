@@ -41,17 +41,17 @@ export const AboutMovieSection: FC<Props> = ({ data }) => {
 	return (
 		<section>
 			<Container className="pt-10 pb-40">
-				<h2 className="mb-16 text-[40px]/12 font-bold">О фильме</h2>
-				<ul className="w-full flex flex-col gap-y-3">
+				<h2 className="mb-10 md:mb-16 text-2xl/8 md:text-[40px]/12 font-bold">О фильме</h2>
+				<ul className="w-full flex flex-col gap-y-3 sm:gap-y-6">
 					{infoItems.map((item, i) =>
 						item.value ? (
 							<li
-								className="flex flex-row items-center gap-y-1 gap-x-2 max-w-[500px] w-full"
+								className="flex flex-col sm:flex-row sm:items-center gap-y-1 :gap-y-0 gap-x-2 max-w-[500px] w-full"
 								key={i}>
-								<p className="flex items-center gap-x-2 text-nowrap w-full after:w-full after:h-0.5 after:border-b after:border-[rgba(255,255,255,.5)] after:border-dotted text-white">
+								<p className="flex items-center gap-x-2 text-nowrap w-full sm:after:w-full sm:after:h-0.5 sm:after:border-b sm:after:border-[rgba(255,255,255,.5)] sm:after:border-dotted text-[rgba(255,255,255,.5)] sm:text-white">
 									{item.title}
 								</p>
-								<p className="text-nowrap">{item.value}</p>
+								<p className="sm:text-nowrap">{item.value}</p>
 							</li>
 						) : (
 							''

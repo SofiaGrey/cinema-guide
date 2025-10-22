@@ -4,7 +4,7 @@ import { useAppDispatch } from '../../hooks';
 import { setVideoOpen } from '../../store/slices';
 import { setVideo } from '../../store/slices/videoSlice';
 import type { Movie } from '../../types';
-import { formatRuntime } from '../../utils';
+import { cn, formatRuntime } from '../../utils';
 import { Button } from '../Button/Button';
 import { Container } from '../Container/Container';
 import { Icon } from '../Icon/Icon';
@@ -86,7 +86,7 @@ export const MovieSection: FC<Props> = ({
 					<div className=" grid grid-cols-4 lg:flex gap-4 ">
 						<Button
 							variant="default"
-							className="bg-btn-primary col-span-full"
+							className={cn("bg-btn-primary", isRandomMovie ? 'col-span-full' : 'col-span-3')}
 							onClick={() => handleClick()}>
 							Трейлер
 						</Button>
